@@ -1,8 +1,17 @@
+import Image from "next/image";
+
 export default function BaristaSection() {
   return (
-    <section id="barista" className="grid border-b-2 border-border grid-cols-[1fr_1fr]">
-      <div className="bg-dark border-r-2 border-border min-h-175 flex items-center justify-center">
-        <p className="text-[10px] text-muted">[Slika bariste]</p>
+    <section id="barista" className="grid border-b border-border grid-cols-[1fr_1fr]">
+     <div className="bg-dark border-b lg:border-b-0 lg:border-r border-border min-h-100 sm:min-h-125 lg:min-h-175 flex items-center justify-center relative overflow-hidden">
+        <Image
+          src="/images/barista.jpg"
+          alt="Barista pri radu s kafom"
+          fill
+          sizes="(max-w-1024px) 100vw, 50vw"
+          className="object-cover opacity-90 transition-transform duration-500 hover:scale-102"
+          priority
+        />
       </div>
 
       <div className="flex flex-col justify-between px-16 py-14">
@@ -15,7 +24,7 @@ export default function BaristaSection() {
             Ti uživaš.
           </h2>
 
-          <p className="text-sm border-l-2  pl-4 mb-6 border-border leading-[1.9]">
+          <p className="text-sm border-l  pl-4 mb-6 border-border leading-[1.9]">
             Zovem se Luka. Već šest godina putujem na kafe sajmove, posjećujem
             plantaže i razgovaram s farmerima. Svaka kafa koju vidite u Origineu
             prošla je kroz moje ruke — od uzorka do šoljice.
@@ -27,7 +36,7 @@ export default function BaristaSection() {
           </p>
         </div>
 
-        <div className="flex flex-row justify-between border-t-2 border-border pt-8 items-center">
+        <div className="flex flex-row justify-between border-t border-border pt-8 items-center">
           <div className="">
             <p className="font-playfair italic text-2xl mb-1">Luka Jović</p>
             <p className="text-xs tracking-wider text-muted">

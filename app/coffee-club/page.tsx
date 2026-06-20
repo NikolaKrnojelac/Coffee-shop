@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CoffeeClubDetails() {
   return (
@@ -15,7 +16,6 @@ export default function CoffeeClubDetails() {
 
       
       <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
-       
         <div className="px-6 sm:px-16 py-10 sm:py-14 border-b md:border-b-0 md:border-r border-border">
           <p className="text-sm text-muted leading-loose">
             Ne naručuješ kafu iz kataloga. Svaki mjesec naš barista Luka lično
@@ -25,7 +25,6 @@ export default function CoffeeClubDetails() {
           </p>
         </div>
 
-       
         <div className="px-6 sm:px-16 py-10 sm:py-14">
           <p className="text-sm text-muted leading-loose">
             Svaka selekcija je ograničena. Biram kafe koje su dostupne u malim
@@ -33,20 +32,12 @@ export default function CoffeeClubDetails() {
             komercijalnu kafu. Ovo je pretplata na priču.
           </p>
         </div>
-      </div>
-
-      
-      <div className="bg-dark border-b-2 border-border min-h-64 sm:min-h-100 flex items-center justify-center">
-        <p className="text-[10px] tracking-[0.2em] text-white/20">
-          [ foto — barista pri radu ]
-        </p>
-      </div>
+      </div>  
 
       
       <div className="px-6 sm:px-16 py-10 sm:py-14 border-b border-border">
         <p className="tracking-wide mb-8 sm:mb-12 text-xs">KAKO FUNKCIONIŠE</p>
 
-        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {[
             {
@@ -72,7 +63,6 @@ export default function CoffeeClubDetails() {
           ].map((item, i) => (
             <div
               key={i}
-              
               className={`py-6 pr-0 lg:pr-10 border-b sm:border-b-0 lg:border-r border-border last:border-0 lg:mr-10 lg:last:mr-0`}
             >
               <p className="text-xs font-mono text-muted mb-3 sm:mb-4">{item.n}</p>
@@ -87,10 +77,14 @@ export default function CoffeeClubDetails() {
 
       
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] border-b border-border">
-        <div className="bg-dark min-h-64 sm:min-h-80 border-b-2 md:border-b-0 md:border-r-2 border-border flex items-center justify-center">
-          <p className="text-[10px] tracking-[0.2em] text-white/20">
-            [ foto — pakovanje kafe ]
-          </p>
+        <div className="bg-dark min-h-64 sm:min-h-80 border-b-2 md:border-b-0 md:border-r-2 border-border flex items-center justify-center relative overflow-hidden">
+          <Image
+            src="/images/pakovanje.jpg"
+            alt="Minimalističko pakovanje Origine specialty kafe"
+            fill
+            sizes="(max-w-768px) 100vw, 40vw"
+            className="object-cover opacity-90 transition-transform duration-500 hover:scale-105"
+          />
         </div>
         <div className="px-6 sm:px-16 py-10 sm:py-14 flex flex-col justify-center">
           <p className="text-[10px] tracking-[0.2em] text-muted mb-4 sm:mb-6">
@@ -112,7 +106,6 @@ export default function CoffeeClubDetails() {
 
       
       <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
-        
         <div className="px-6 sm:px-16 py-10 sm:py-14 border-b md:border-b-0 md:border-r border-border flex flex-col justify-between">
           <div>
             <p className="text-[10px] tracking-[0.2em] text-muted mb-3">
